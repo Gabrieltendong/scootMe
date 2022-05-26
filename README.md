@@ -3,7 +3,7 @@
 ## Clone app 
 ```bash
 # using git
-$ git clone https://github.com/Gabrieltendong/foodBin.git
+$ git clone https://github.com/Gabrieltendong/scootMe.git
 ```
 
 NB: after clone rename scootMe.text to scootMe.jks
