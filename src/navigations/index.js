@@ -7,12 +7,13 @@ import HomeScreen from '../screens/Home';
 import WelcomeScreen from '../screens/Welcome';
 import LoginScreen from '../screens/Login';
 import RegisterScreen from '../screens/Register';
+import DrawerNavigator from './drawerNavigator';
 
 const Stack = createNativeStackNavigator();
 
 function Router() {
   return (
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator screenOptions={{headerShown: false, animation: 'fade_from_bottom'}}>
         <Stack.Screen 
             name="Welcome" 
             component={WelcomeScreen}
@@ -28,6 +29,10 @@ function Router() {
         <Stack.Screen 
             name="Register" 
             component={RegisterScreen} 
+        />
+        <Stack.Screen 
+            name="Drawer" 
+            component={DrawerNavigator} 
         />
       </Stack.Navigator>
   );

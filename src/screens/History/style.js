@@ -3,9 +3,9 @@ import { StyleSheet } from 'react-native'
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 20
+        top: -70
     },
-    btn: {
-        marginTop: 50
+    contentContainerStyle: {
+        paddingTop: 20
     }
 })

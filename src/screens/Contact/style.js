@@ -5,7 +5,12 @@ export const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 20
     },
+    input: {
+        height: 200,
+        textAlignVertical: 'top',
+        paddingTop: 10
+    },
     btn: {
-        marginTop: 50
+        marginTop: 30
     }
 })

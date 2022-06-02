@@ -6,12 +6,16 @@ export const styles = StyleSheet.create({
         marginVertical: 10
     },
     input_wrapper: {
-        height: 50,
+        minHeight: 50,
         backgroundColor: colors.LIGHT_BLUE,
-        borderRadius: 10
+        borderRadius: 15,
+        paddingHorizontal: 15,
+        color: colors.WHITE
     },
     label_wrapper: {
         color: colors.WHITE,
-        fontSize: 18
+        fontSize: 18,
+        marginLeft: 10,
+        marginBottom: 5
     }
 })

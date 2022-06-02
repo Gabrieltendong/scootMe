@@ -4,7 +4,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './style'
 import { colors } from '../../../styles';
-import { Image, TouchableOpacity } from 'react-native';
+import { Image, ScrollView, TouchableOpacity } from 'react-native';
 import { Icon } from '@rneui/base';
 
 // create a component
@@ -25,13 +25,18 @@ const Container = ({children, showBackButton, navigation}) => {
                         />
                     </TouchableOpacity>
                 }
-                <Image 
-                    source={require('../../../assets/images/logo.png')}
-                    style={styles.logo_wrapper}
-                    resizeMode='contain'
-                />
-                
-                {children}
+                <ScrollView 
+                    contentContainerStyle={{paddingBottom: 40}}
+                    keyboardShouldPersistTaps='always'
+                >
+                    <Image 
+                        source={require('../../../assets/images/logo.png')}
+                        style={styles.logo_wrapper}
+                        resizeMode='contain'
+                    />
+                    
+                    {children}
+                </ScrollView>
             </LinearGradient>
     );
 };

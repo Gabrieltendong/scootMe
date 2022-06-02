@@ -17,7 +17,10 @@ const Input = ({
     defaultValue,
     keyboardType,
     secureTextEntry,
-    onChangeText
+    onChangeText,
+    multiline,
+    numberOfLines,
+    style
 }) => {
     return (
         <View style={styles.container}>
@@ -28,7 +31,9 @@ const Input = ({
                 keyboardType={keyboardType}
                 secureTextEntry={secureTextEntry}
                 placeholderTextColor={colors.WHITE}
-                style={styles.input_wrapper}
+                style={[styles.input_wrapper, style]}
+                multiline={multiline}
+                numberOfLines={numberOfLines}
                 onChangeText={onChangeText}
             />
         </View>

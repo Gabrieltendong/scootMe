@@ -1,19 +1,42 @@
 //import liraries
-import React, { Component } from 'react';
+import React from 'react';
 import { 
-    View, 
-    Text, 
-    StyleSheet 
+    View
 } from 'react-native';
+import { Button, Input } from '../../components/common';
+import { Container } from '../../components/layout';
 
 import { styles } from './style';
 
 // create a component
-const RegisterScreen = () => {
+const RegisterScreen = ({navigation}) => {
     return (
-        <View style={styles.container}>
-            <Text>RegisterScreen</Text>
-        </View>
+        <Container 
+            showBackButton={true}
+            navigation={navigation}
+        >
+            <View style={styles.container}>
+                <Input
+                    label="Adresse email"
+                    placeholder="test_Scootme@compte.fr"
+                    
+                />
+                <Input
+                    label="Mot de passe"
+                    placeholder="********************"
+                    secureTextEntry={true}
+                />
+                <Input
+                    label="Confirmer mot de passe"
+                    placeholder="********************"
+                    secureTextEntry={true}
+                />
+                <Button
+                    text="S'inscrire"
+                    style = {styles.btn}
+                />
+            </View>
+        </Container>
     );
 };
 

@@ -1,19 +1,37 @@
 //import liraries
-import React, { Component } from 'react';
+import React from 'react';
 import { 
-    View, 
-    Text, 
-    StyleSheet 
+    View
 } from 'react-native';
+import { Button, Input } from '../../components/common';
+import { Container } from '../../components/layout';
 
 import { styles } from './style';
 
 // create a component
-const LoginScreen = () => {
+const LoginScreen = ({navigation}) => {
     return (
-        <View style={styles.container}>
-            <Text>LoginScreen</Text>
-        </View>
+        <Container 
+            showBackButton={true}
+            navigation={navigation}
+        >
+            <View style={styles.container}>
+                <Input
+                    label="Adresse email"
+                    placeholder="test_Scootme@compte.fr"
+                />
+                <Input
+                    label="Mot de passe"
+                    placeholder="********************"
+                    secureTextEntry={true}
+                />
+                <Button
+                    text="Se connecter"
+                    style = {styles.btn}
+                    onPress= {() => navigation.navigate('Drawer')}
+                />
+            </View>
+        </Container>
     );
 };
 
