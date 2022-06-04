@@ -18,13 +18,12 @@ const WelcomeScreen = ({navigation}) => {
                 <Text style={styles.title_wrapper}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley</Text>
                 <Button 
                     style={styles.btn}
-                    text='Créer un compte'
-                    onPress={() => navigation.navigate('Register')}
+                    text='Creer un compte'
                 />
                 <Button 
                     style={styles.btn}
-                    text='Se connecter'
-                    onPress={() => navigation.navigate('Login')}
+                    text='Creer un compte'
+                    
                 />
             </View>
         </Container>
