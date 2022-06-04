@@ -8,34 +8,38 @@ import { styles } from './style';
 const InputEditing = ({
     label,
     defaultValue,
-    onUpdate
+    onUpdate,
+    showInput,
+    onPress,
+    secureTextEntry
 }) => {
-
-    const [showInput, setShowInput] = useState(false)
 
     return (
         <View style={styles.container}>
             <View style={styles.header}>
                 <Text style={styles.label_wrapper}>{label}</Text>
-                <TouchableOpacity onPress={onUpdate} style={styles.btn}>
-                    {
-                        showInput?
+                {
+                    showInput?
+                    <TouchableOpacity onPress={onUpdate} style={styles.btn}>
                         <Text style={styles.text_light_blue}>Valider</Text>
-                        :
+                    </TouchableOpacity>
+                    :
+                    <TouchableOpacity onPress={onPress} style={styles.btn}>
                         <Text style={styles.text_light_blue}>Modifier</Text>
-                    }
-                </TouchableOpacity>
+                    </TouchableOpacity>
+                }
             </View>
             {
-                showInput && 
+                showInput != undefined && 
                 <View>
                     {
-                        showInput?
-                        <Text style={styles.text_light_blue}>{defaultValue}</Text>
+                        !showInput?
+                        <Text style={[styles.text_light_blue]}>{defaultValue}</Text>
                         :
                         <TextInput
                             style={styles.input_wrapper}
                             defaultValue={defaultValue}
+                            secureTextEntry={secureTextEntry}
                         />
                     }
                 </View>

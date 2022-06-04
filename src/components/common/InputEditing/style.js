@@ -15,15 +15,18 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.LIGHT_BLUE,
         borderRadius: 15,
         paddingHorizontal: 15,
-        color: '#777'
+        color: '#f3f3f3'
     },
     label_wrapper: {
         color: colors.WHITE,
         fontSize: 18,
-        marginLeft: 10,
         marginBottom: 5
     },
-    text_white: {
-        color: colors.WHITE
+    text_light_blue: {
+        color: colors.WHITE,
+        opacity: 0.5
+    },
+    margiLeft: {
+        margiLeft: 10
     }
 })
