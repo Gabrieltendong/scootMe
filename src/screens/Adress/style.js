@@ -7,13 +7,5 @@ export const styles = StyleSheet.create({
     },
     btn: {
         marginTop: 50
-    },
-    input: {
-        height: 200,
-        textAlignVertical: 'top',
-        paddingTop: 10
-    },
-    rating: {
-        marginVertical: 10
-    },
+    }
 })

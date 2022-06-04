@@ -53,6 +53,7 @@ const ProfilScreen = ({navigation}) => {
                     label='Nom Prenom'
                     defaultValue='Dupon Jean'
                     showInput={false}
+                    onPress = {() => navigation.navigate('Name')}
                 />
                 <InputEditing 
                     label='Numero de telephone'
@@ -63,10 +64,12 @@ const ProfilScreen = ({navigation}) => {
                     label='Adresse'
                     defaultValue='43 rue du vilandry'
                     showInput={false}
+                    onPress = {() => navigation.navigate('Adress')}
                 />
                 <InputEditing 
                     label='Coordonnées bancaire'
                     defaultValue='43 rue du vilandry'
+                    onPress={() => navigation.navigate('CreditCard')}
                 />
                 <Button 
                     text='Accueil'
